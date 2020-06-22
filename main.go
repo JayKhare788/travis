@@ -7,5 +7,5 @@ func main() {
 }
 
 func run() string {
-   return "Setup Travis CI for Golang project nope"
+   return "Setup Travis CI for Golang project"
 }
