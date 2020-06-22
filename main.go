@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(run())
+   fmt.Println(run())
 }
 
 func run() string {
-	return "Setting up Travis CI for golang projects"
+   return "Setup Travis CI for Golang project"
 }
