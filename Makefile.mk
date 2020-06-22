@@ -4,7 +4,7 @@ GOCLEAN=$(GOCMD) clean
 GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
 BINARY_NAME=travis
-LINTER=golangcli-lint
+LINTER=golangci-lint
 
 all: test build
 
