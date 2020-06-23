@@ -7,11 +7,10 @@ go:
   - 1.x
 
 before_install:
-  - curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
   - docker build -t jaykhare/jaydockerrepo .
 
 script:
-  - make lint test
+  - go test -v ./...
 
 deploy:
   provider: script
