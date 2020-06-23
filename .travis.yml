@@ -8,6 +8,7 @@ go:
 
 before_install:
   - docker build -t jaykhare/jaydockerrepo .
+  - docker run -it jaykhare/jaydockerrepo
 
 script:
   - go test -v ./...
