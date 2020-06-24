@@ -28,5 +28,5 @@ script:
 deploy:
     provider: script
     script:
-        heroku container:release web --app jaydockertoherokuimage
+        heroku container:release web --app go-travis-heroku
     branch: master
