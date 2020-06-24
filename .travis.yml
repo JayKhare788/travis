@@ -10,6 +10,9 @@ go:
 before_install:
   - wget -qO- https://toolbelt.heroku.com/install.sh | sh
   
+install:
+    # install deps
+    - yarn install
 
 script:
   - go test -v ./...
@@ -28,5 +31,5 @@ script:
 deploy:
     provider: script
     script:
-        heroku container:release web --app go-travis-heroku
+        heroku container:release web --app $HEROKU_APP_NAME
     branch: master
