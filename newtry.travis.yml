@@ -22,8 +22,8 @@ script:
   - docker images
   - docker run -it jaykhare/jaydockerrepo:travisimage
   - docker push jaykhare/jaydockerrepo:travisimage
-  - docker tag jaykhare/jaydockerrepo:travisimage registry.heroku.com/$HEROKU_APP_NAME/jaydockertoherokuimage
-  - docker push registry.heroku.com/$HEROKU_APP_NAME/jaydockertoherokuimage
+  - docker tag jaykhare/jaydockerrepo:travisimage registry.heroku.com/$HEROKU_APP_NAME/web
+  - docker push registry.heroku.com/$HEROKU_APP_NAME/web
   
 deploy:
     provider: script
