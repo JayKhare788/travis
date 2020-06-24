@@ -24,3 +24,9 @@ script:
   - docker push jaykhare/jaydockerrepo:travisimage
   - docker tag jaykhare/jaydockerrepo:travisimage registry.heroku.com/$HEROKU_APP_NAME/jaydockertoherokuimage
   - docker push registry.heroku.com/$HEROKU_APP_NAME/jaydockertoherokuimage
+  
+deploy:
+    provider: script
+    script:
+        heroku container:release web --app jaydockertoherokuimage
+    branch: master
